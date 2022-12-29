@@ -36,7 +36,7 @@ class AppWidget extends StatelessWidget {
 
                     )
                 ),
-                SizedBox(height: 20,),
+                const SizedBox(height: 20,),
                 CupertinoTextField(
                     placeholder: "Senha",
                     placeholderStyle: TextStyle(color: Colors.grey),
@@ -51,20 +51,19 @@ class AppWidget extends StatelessWidget {
                     ),
                     obscureText: true,
                 ),
-                SizedBox(height: 20,),
+                const SizedBox(height: 20,),
                 CupertinoButton(
                     color: Colors.blue[800],
-                    child: Text("Autenticar"),
                     onPressed: (){
 
                     },
                     borderRadius: BorderRadius.circular(24),
+                    child: const Text("Autenticar"),
                 )
               ],
             ),
           )
       ),
-
       ),
     );
   }

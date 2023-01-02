@@ -12,7 +12,7 @@ class DefaultButton extends StatelessWidget {
     return CupertinoButton(
       color: Colors.blue[800],
       onPressed: (){
-        Navigator.pushNamed(context, route);
+        Navigator.pushNamed(context, route,);
       },
       borderRadius: BorderRadius.circular(24),
       child: Text(text, style: TextStyle(color: Colors.white),),

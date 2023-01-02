@@ -86,9 +86,9 @@ class LoginPage extends StatelessWidget {
                     child: const Text("Autenticar", style: TextStyle(color: Colors.white),),
                   ),
                   SizedBox(height: 100,),
-                  Align(
+                  const Align(
                     alignment: Alignment.bottomLeft,
-                    child: DefaultButton(route: '/novoFunc', text: 'Novo Funcionário'),
+                    child: DefaultButton(route: '/mainMenu', text: 'Novo Funcionário'),
                   ),
                 ],
               ),

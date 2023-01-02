@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:tecnologia_em_saude/screens/login_page.dart';
 import 'package:tecnologia_em_saude/screens/main_menu_page.dart';
+import 'package:tecnologia_em_saude/screens/novo_funcionario_page.dart';
 
 class AppWidget extends StatelessWidget {
   const AppWidget({Key? key}) : super(key: key);
@@ -16,6 +17,7 @@ class AppWidget extends StatelessWidget {
       routes: {
         '/': (_) => LoginPage(),
         '/mainMenu': (_) => MainMenu(),
+        '/novoFunc': (_) => NovoFuncionario(),
       },
     );
   }

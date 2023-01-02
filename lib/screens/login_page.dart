@@ -17,6 +17,7 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return CupertinoApp(
       home: CupertinoPageScaffold(
+
         backgroundColor: Colors.lightBlueAccent,
         navigationBar: const CupertinoNavigationBar(
           middle: Text('Teconologia em saúde'),
@@ -25,16 +26,41 @@ class LoginPage extends StatelessWidget {
         child: Center(
             child: SizedBox(
               height: double.infinity,
-              width: 350,
+              width: double.infinity,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  CupertinoTextField(
-                      placeholder: "Usuário",
+                  SizedBox(height: 100,),
+                  SizedBox(
+                    width: 400,
+                    child: CupertinoTextField(
+                        placeholder: "Usuário",
+                        placeholderStyle: const TextStyle(color: Colors.grey),
+                        style: const TextStyle(color: Colors.black),
+                        onChanged: (value){
+                          login = value;
+                        },
+                        decoration: BoxDecoration(
+
+                          color: Colors.white,
+                          border: Border.all(
+                            width: 3,
+                          ),
+                          borderRadius: BorderRadius.circular(12),
+
+                        )
+                    ),
+                  ),
+                  const SizedBox(height: 20,),
+                  SizedBox(
+                    width: 400,
+                    child: CupertinoTextField(
+                      placeholder: "Senha",
+                      obscureText: true,
                       placeholderStyle: const TextStyle(color: Colors.grey),
                       style: const TextStyle(color: Colors.black),
                       onChanged: (value){
-                        login = value;
+                        password = value;
                       },
                       decoration: BoxDecoration(
                         color: Colors.white,
@@ -42,26 +68,9 @@ class LoginPage extends StatelessWidget {
                           width: 3,
                         ),
                         borderRadius: BorderRadius.circular(12),
-
-                      )
-                  ),
-                  const SizedBox(height: 20,),
-                  CupertinoTextField(
-                    placeholder: "Senha",
-                    obscureText: true,
-                    placeholderStyle: const TextStyle(color: Colors.grey),
-                    style: const TextStyle(color: Colors.black),
-                    onChanged: (value){
-                      password = value;
-                    },
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      border: Border.all(
-                        width: 3,
                       ),
-                      borderRadius: BorderRadius.circular(12),
-                    ),
 
+                    ),
                   ),
                   const SizedBox(height: 20,),
                   CupertinoButton(
@@ -75,7 +84,12 @@ class LoginPage extends StatelessWidget {
                     },
                     borderRadius: BorderRadius.circular(24),
                     child: const Text("Autenticar", style: TextStyle(color: Colors.white),),
-                  )
+                  ),
+                  SizedBox(height: 100,),
+                  Align(
+                    alignment: Alignment.bottomLeft,
+                    child: DefaultButton(route: '/novoFunc', text: 'Novo Funcionário'),
+                  ),
                 ],
               ),
             )

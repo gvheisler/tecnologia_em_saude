@@ -3,7 +3,14 @@ import 'package:flutter/material.dart';
 
 
 class LoginPage extends StatelessWidget {
+  final String Rlogin = 'gabriel';
+  final String Rpassword = '12345';
+
+  static String login = '';
+  static String password = '';
+
   const LoginPage({Key? key}) : super(key: key);
+
 
   @override
   Widget build(BuildContext context) {
@@ -21,12 +28,13 @@ class LoginPage extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-
                   CupertinoTextField(
                       placeholder: "Usuário",
                       placeholderStyle: const TextStyle(color: Colors.grey),
-                      textAlign: TextAlign.left,
                       style: const TextStyle(color: Colors.black),
+                      onChanged: (value){
+                        login = value;
+                      },
                       decoration: BoxDecoration(
                         color: Colors.white,
                         border: Border.all(
@@ -39,9 +47,12 @@ class LoginPage extends StatelessWidget {
                   const SizedBox(height: 20,),
                   CupertinoTextField(
                     placeholder: "Senha",
+                    obscureText: true,
                     placeholderStyle: const TextStyle(color: Colors.grey),
-                    textAlign: TextAlign.left,
                     style: const TextStyle(color: Colors.black),
+                    onChanged: (value){
+                      password = value;
+                    },
                     decoration: BoxDecoration(
                       color: Colors.white,
                       border: Border.all(
@@ -49,12 +60,16 @@ class LoginPage extends StatelessWidget {
                       ),
                       borderRadius: BorderRadius.circular(12),
                     ),
-                    obscureText: true,
+
                   ),
                   const SizedBox(height: 20,),
                   CupertinoButton(
                     color: Colors.blue[800],
                     onPressed: (){
+                      if(password==Rpassword && login == Rlogin){
+                        //print("login certo");
+                        Navigator.pushReplacementNamed(context, '/mainMenu');
+                      }
 
                     },
                     borderRadius: BorderRadius.circular(24),

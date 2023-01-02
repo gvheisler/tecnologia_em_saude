@@ -8,8 +8,8 @@ class AppWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CupertinoApp(
-      theme: CupertinoThemeData(
-          brightness: Brightness.light,
+      theme: const CupertinoThemeData(
+          //brightness: Brightness.light,
         primaryColor: CupertinoColors.black,
       ),
       //home: LoginPage(),

@@ -66,15 +66,15 @@ class LoginPage extends StatelessWidget {
                   const SizedBox(height: 20,),
                   CupertinoButton(
                     color: Colors.blue[800],
+
                     onPressed: (){
                       if(password==Rpassword && login == Rlogin){
                         //print("login certo");
-                        Navigator.pushNamed(context, '/mainMenu');
+                        Navigator.pushReplacementNamed(context, '/mainMenu');
                       }
-
                     },
                     borderRadius: BorderRadius.circular(24),
-                    child: const Text("Autenticar"),
+                    child: const Text("Autenticar", style: TextStyle(color: Colors.white),),
                   )
                 ],
               ),

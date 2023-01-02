@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:tecnologia_em_saude/misc.dart';
 
 
 class LoginPage extends StatelessWidget {
@@ -18,7 +19,7 @@ class LoginPage extends StatelessWidget {
       home: CupertinoPageScaffold(
         backgroundColor: Colors.lightBlueAccent,
         navigationBar: const CupertinoNavigationBar(
-          middle: Text('Tecnologia em saúde'),
+          middle: Text('Teconologia em saúde'),
           backgroundColor: Colors.lightBlue,
         ),
         child: Center(
@@ -68,7 +69,7 @@ class LoginPage extends StatelessWidget {
                     onPressed: (){
                       if(password==Rpassword && login == Rlogin){
                         //print("login certo");
-                        Navigator.pushReplacementNamed(context, '/mainMenu');
+                        Navigator.pushNamed(context, '/mainMenu');
                       }
 
                     },

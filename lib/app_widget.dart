@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
-import 'package:tecnologia_em_saude/login_page.dart';
-import 'package:tecnologia_em_saude/main_menu_page.dart';
+import 'package:tecnologia_em_saude/screens/login_page.dart';
+import 'package:tecnologia_em_saude/screens/main_menu_page.dart';
 
 class AppWidget extends StatelessWidget {
   const AppWidget({Key? key}) : super(key: key);

@@ -17,6 +17,8 @@ class MainMenu extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: const[
+            Text("Entrevistas", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 50, color: Colors.white),),
+            SizedBox(height: 20,),
             DefaultButton(route: '/', text: 'Nova entrevista',),
             SizedBox(height: 20,),
             DefaultButton(route: '/', text: 'Entrevistas anteriores',),
